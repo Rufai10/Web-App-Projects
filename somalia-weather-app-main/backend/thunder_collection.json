@@ -1,0 +1,172 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "Somalia Weather App",
+  "dateExported": "2026-02-02T12:00:00.000Z",
+  "version": "1.1",
+  "folders": [],
+  "requests": [
+    {
+      "containerId": "",
+      "sortNum": 10000,
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "colId": "somalia_weather_col",
+      "name": "Login (Admin)",
+      "url": "http://127.0.0.1:5000/api/v1/auth/login",
+      "method": "POST",
+      "modified": "2026-02-02T12:00:00.000Z",
+      "created": "2026-02-02T12:00:00.000Z",
+      "_id": "req_login",
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"email\": \"admin@weather.com\",\n  \"password\": \"password123\"\n}",
+        "form": []
+      },
+      "tests": [
+        {
+          "type": "set-env-var",
+          "custom": "json.token",
+          "action": "setto",
+          "value": "{{token}}"
+        }
+      ]
+    },
+    {
+      "containerId": "",
+      "sortNum": 20000,
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{token}}"
+        }
+      ],
+      "colId": "somalia_weather_col",
+      "name": "Get All Cities",
+      "url": "http://127.0.0.1:5000/api/v1/cities",
+      "method": "GET",
+      "modified": "2026-02-02T12:00:00.000Z",
+      "created": "2026-02-02T12:00:00.000Z",
+      "_id": "req_get_cities",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "",
+      "sortNum": 30000,
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{token}}"
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "colId": "somalia_weather_col",
+      "name": "Create City",
+      "url": "http://127.0.0.1:5000/api/v1/cities",
+      "method": "POST",
+      "modified": "2026-02-02T12:00:00.000Z",
+      "created": "2026-02-02T12:00:00.000Z",
+      "_id": "req_create_city",
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"name\": \"Kismayo\",\n  \"region\": \"Jubbada Hoose\"\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "containerId": "",
+      "sortNum": 40000,
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{token}}"
+        }
+      ],
+      "colId": "somalia_weather_col",
+      "name": "Get Weather",
+      "url": "http://127.0.0.1:5000/api/v1/weather",
+      "method": "GET",
+      "modified": "2026-02-02T12:00:00.000Z",
+      "created": "2026-02-02T12:00:00.000Z",
+      "_id": "req_get_weather",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "",
+      "sortNum": 50000,
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{token}}"
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "colId": "somalia_weather_col",
+      "name": "Create Weather",
+      "url": "http://127.0.0.1:5000/api/v1/weather",
+      "method": "POST",
+      "modified": "2026-02-02T12:00:00.000Z",
+      "created": "2026-02-02T12:00:00.000Z",
+      "_id": "req_create_weather",
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"cityId\": \"REPLACE_WITH_CITY_ID\",\n  \"temperature\": 29,\n  \"condition\": \"Sunny\",\n  \"humidity\": 65,\n  \"windSpeed\": 12,\n  \"date\": \"2026-02-02T12:00:00.000Z\"\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "containerId": "",
+      "sortNum": 60000,
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{token}}"
+        }
+      ],
+      "colId": "somalia_weather_col",
+      "name": "Admin Stats",
+      "url": "http://127.0.0.1:5000/api/v1/admin/stats",
+      "method": "GET",
+      "modified": "2026-02-02T12:00:00.000Z",
+      "created": "2026-02-02T12:00:00.000Z",
+      "_id": "req_admin_stats",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "",
+      "sortNum": 70000,
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{token}}"
+        }
+      ],
+      "colId": "somalia_weather_col",
+      "name": "Admin Report",
+      "url": "http://127.0.0.1:5000/api/v1/admin/report",
+      "method": "GET",
+      "modified": "2026-02-02T12:00:00.000Z",
+      "created": "2026-02-02T12:00:00.000Z",
+      "_id": "req_admin_report",
+      "params": [],
+      "tests": []
+    }
+  ]
+}

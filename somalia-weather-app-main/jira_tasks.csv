@@ -1,0 +1,13 @@
+Summary,Description,Issue Type,Priority,Labels,Assignee
+"Implement Password Reset flow (SWA-1)","Allow users to request a password reset email and update their password securely. (Mohamed)","Story","High","Security,Auth","mohamedozyy12@gmail.com"
+"Set up GitHub Actions for CI/CD (SWA-2)","Configure automated testing and linting on every Pull Request to main/develop branches. (Mohamed)","Story","High","DevOps","mohamedozyy12@gmail.com"
+"Dockerize Application (SWA-3)","Create Dockerfile and docker-compose.yml for easy deployment of Backend and Frontend. (Mohamed)","Story","Medium","DevOps","mohamedozyy12@gmail.com"
+"Implement API Rate Limiting (SWA-4)","Prevent abuse by limiting the number of requests per IP address using express-rate-limit. (Mohamed)","Story","Medium","Security,Backend","mohamedozyy12@gmail.com"
+"Integrate OpenWeatherMap API (SWA-5)","Replace mock data with real-time weather data fetching from OpenWeatherMap API. (Ahmed)","Story","High","API,Data","Ahmedziyech143@gmail.com"
+"Background Job for Weather Updates (SWA-6)","Set up a cron job to automatically update cached weather data for monitored cities every hour. (Ahmed)","Story","High","Backend","Ahmedziyech143@gmail.com"
+"Export Data to CSV/PDF (SWA-7)","Add functionality for Admins to download user and weather reports as CSV or PDF files. (Ahmed)","Story","Medium","Reporting","Ahmedziyech143@gmail.com"
+"Add Pagination to APIs (SWA-8)","Implement pagination for /cities and /weather endpoints to handle large datasets efficiently. (Ahmed)","Story","Medium","API,Optimization","Ahmedziyech143@gmail.com"
+"Add Pull to Refresh (SWA-9)","Enable pull-to-refresh gesture on Dashboard and Explore screens to reload data manually. (Yasuu)","Story","Medium","UX","yasuuhassan@gmail.com"
+"Implement Offline Mode (SWA-10)","Cache data locally using Hive or SharedPrefs to show weather even when internet is disconnected. (Yasuu)","Story","High","UX,Mobile","yasuuhassan@gmail.com"
+"Weather Condition Animations (SWA-11)","Add Lottie animations or code-based animations for sunny, rainy, and cloudy states. (Yasuu)","Story","Low","UI,Polish","yasuuhassan@gmail.com"
+"User Favorites List (SWA-12)","Allow users to bookmark/star their favorite cities for quick access on the Dashboard. (Yasuu)","Story","Medium","Feature","yasuuhassan@gmail.com"
